@@ -1,0 +1,142 @@
+[
+  {
+    "ip": "1.1.1.1",
+    "accessible": true,
+    "hostname": "one.one.one.one",
+    "ping_temps_ms": 3.63,
+    "date_de_verification": 1753908835.7352674
+  },
+  {
+    "ip": "4.2.2.2",
+    "accessible": true,
+    "hostname": "b.resolvers.level3.net",
+    "ping_temps_ms": 13.28,
+    "date_de_verification": 1753908835.737318
+  },
+  {
+    "ip": "8.8.8.8",
+    "accessible": true,
+    "hostname": "dns.google",
+    "ping_temps_ms": 7.2,
+    "date_de_verification": 1753908835.7352674
+  },
+  {
+    "ip": "9.9.9.9",
+    "accessible": true,
+    "hostname": "dns9.quad9.net",
+    "ping_temps_ms": 10.15,
+    "date_de_verification": 1753908835.7363193
+  },
+  {
+    "ip": "9.9.9.10",
+    "accessible": true,
+    "hostname": "dns10.quad9.net",
+    "ping_temps_ms": 9.25,
+    "date_de_verification": 1753908835.76838
+  },
+  {
+    "ip": "10.255.255.1",
+    "accessible": false,
+    "hostname": null,
+    "ping_temps_ms": null,
+    "date_de_verification": 1753908835.7363193
+  },
+  {
+    "ip": "64.6.64.6",
+    "accessible": true,
+    "hostname": "rec1pubns1.ultradns.net",
+    "ping_temps_ms": 11.06,
+    "date_de_verification": 1753908835.7573202
+  },
+  {
+    "ip": "64.6.65.6",
+    "accessible": true,
+    "hostname": "rec1pubns2.ultradns.net",
+    "ping_temps_ms": 12.13,
+    "date_de_verification": 1753908835.762389
+  },
+  {
+    "ip": "169.254.0.1",
+    "accessible": false,
+    "hostname": null,
+    "ping_temps_ms": null,
+    "date_de_verification": 1753908835.7573202
+  },
+  {
+    "ip": "172.16.255.255",
+    "accessible": false,
+    "hostname": null,
+    "ping_temps_ms": null,
+    "date_de_verification": 1753908835.7659013
+  },
+  {
+    "ip": "192.0.2.1",
+    "accessible": false,
+    "hostname": null,
+    "ping_temps_ms": null,
+    "date_de_verification": 1753908835.7352674
+  },
+  {
+    "ip": "192.168.56.150",
+    "accessible": false,
+    "hostname": null,
+    "ping_temps_ms": null,
+    "date_de_verification": 1753908835.7363193
+  },
+  {
+    "ip": "192.168.100.100",
+    "accessible": false,
+    "hostname": null,
+    "ping_temps_ms": null,
+    "date_de_verification": 1753908835.7613256
+  },
+  {
+    "ip": "192.203.230.10",
+    "accessible": true,
+    "hostname": "e.root-servers.net",
+    "ping_temps_ms": 4.58,
+    "date_de_verification": 1753908835.7603242
+  },
+  {
+    "ip": "198.41.0.4",
+    "accessible": true,
+    "hostname": "a.root-servers.net",
+    "ping_temps_ms": 7.15,
+    "date_de_verification": 1753908835.737318
+  },
+  {
+    "ip": "198.51.100.10",
+    "accessible": false,
+    "hostname": null,
+    "ping_temps_ms": null,
+    "date_de_verification": 1753908835.7613256
+  },
+  {
+    "ip": "199.7.91.13",
+    "accessible": true,
+    "hostname": "d.root-servers.net",
+    "ping_temps_ms": 11.22,
+    "date_de_verification": 1753908835.737318
+  },
+  {
+    "ip": "208.67.222.222",
+    "accessible": true,
+    "hostname": "dns.opendns.com",
+    "ping_temps_ms": 12.22,
+    "date_de_verification": 1753908835.7363193
+  },
+  {
+    "ip": "224.0.0.1",
+    "accessible": false,
+    "hostname": "all-systems.mcast.net",
+    "ping_temps_ms": null,
+    "date_de_verification": 1753908835.7745159
+  },
+  {
+    "ip": "240.0.0.1",
+    "accessible": false,
+    "hostname": null,
+    "ping_temps_ms": null,
+    "date_de_verification": 1753908835.7563102
+  }
+]
