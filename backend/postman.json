@@ -1,0 +1,130 @@
+{
+  "info": {
+    "name": "IP Address API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create IP Address",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5050/v1/ip",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5050",
+          "path": [
+            "v1",
+            "ip"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ip\": \"192.168.1.1\",\n  \"accessible\": true,\n  \"hostname\": \"router.local\",\n  \"ping_temps_ms\": 1.5,\n  \"date_de_verification\": 1753908835.7352674,\n  \"date_de_modification\": 1753908835.7352674\n}"
+        }
+      }
+    },
+    {
+      "name": "Get IP Address by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5050/v1/ip/{{ip_id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5050",
+          "path": [
+            "v1",
+            "ip",
+            "{{ip_id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All IP Addresses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5050/v1/ips",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5050",
+          "path": [
+            "v1",
+            "ips"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update IP Address",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5050/v1/ip/{{ip_id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5050",
+          "path": [
+            "v1",
+            "ip",
+            "{{ip_id}}"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"accessible\": false,\n  \"hostname\": \"updated.local\",\n  \"ping_temps_ms\": 2.5,\n  \"date_de_modification\": 1753908835.7352674\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete IP Address",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5050/v1/ip/{{ip_id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5050",
+          "path": [
+            "v1",
+            "ip",
+            "{{ip_id}}"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "ip_id",
+      "value": "your-ip-id-here"
+    }
+  ]
+}
