@@ -1,25 +1,16 @@
-
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import IpList from './components/IpList';
 
 function App() {
     return (
-        <div className="container">
-            <header className="text-center my-5">
-                <img src={logo} className="App-logo" alt="logo" />
-                {/* Utilisation de classes Bootstrap */}
-                <div className="alert alert-primary" role="alert">
-                    Un exemple avec Bootstrap
+        <div className="App">
+            <nav className="navbar navbar-dark bg-dark">
+                <div className="container">
+                    <span className="navbar-brand mb-0 h1">Gestionnaire d'IPs</span>
                 </div>
-                {/* Utilisation de classes Tailwind */}
-                <div className="bg-blue-500 text-white p-4 rounded-lg shadow-md">
-                    Un exemple avec Tailwind
-                </div>
-                {/* Mélange des deux */}
-                <button className="btn btn-primary mt-4 hover:bg-blue-700 transform hover:scale-105 transition-transform">
-                    Un bouton avec les deux
-                </button>
-            </header>
+            </nav>
+            <IpList />
         </div>
     );
 }
