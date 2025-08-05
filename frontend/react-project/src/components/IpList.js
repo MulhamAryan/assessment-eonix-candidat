@@ -14,14 +14,7 @@ function IpList() {
     const [deleteError, setDeleteError] = useState(null);
 
     const loadIps = async () => {
-        try {
-            const data = await ipService.getAllIps();
-            setIps(data);
-            setLoading(false);
-        } catch (err) {
-            setError(err.message);
-            setLoading(false);
-        }
+        // Utilise le service ipService pour charger les IPs Addresse
     };
 
     useEffect(() => {
@@ -51,13 +44,8 @@ function IpList() {
     };
 
     const handleDeleteConfirm = async () => {
-        try {
-            await ipService.deleteIp(deletingIp.id);
-            await loadIps();
-            setDeletingIp(null);
-        } catch (err) {
-            setDeleteError(err.message);
-        }
+        // Utilise le service ipService pour supprimer une addresse IP
+
     };
 
     if (loading) return <div>Chargement...</div>;
@@ -123,32 +111,7 @@ function IpList() {
                     </tr>
                     </thead>
                     <tbody>
-                    {ips.map((ip) => (
-                        <tr key={ip.id}>
-                            <td>{ip.ip}</td>
-                            <td>{ip.hostname || '-'}</td>
-                            <td>
-                                    <span className={`badge ${ip.accessible ? 'bg-success' : 'bg-danger'}`}>
-                                        {ip.accessible ? 'Oui' : 'Non'}
-                                    </span>
-                            </td>
-                            <td>{ip.ping_temps_ms || '-'}</td>
-                            <td>
-                                <button
-                                    className="btn btn-sm btn-primary me-2"
-                                    onClick={() => handleEditClick(ip)}
-                                >
-                                    Éditer
-                                </button>
-                                <button
-                                    className="btn btn-sm btn-danger"
-                                    onClick={() => handleDeleteClick(ip)}
-                                >
-                                    Supprimer
-                                </button>
-                            </td>
-                        </tr>
-                    ))}
+                    <!-- Lister les addresses charger dans le tableau-->
                     </tbody>
                 </table>
             </div>
