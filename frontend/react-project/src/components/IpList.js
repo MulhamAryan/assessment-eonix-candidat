@@ -75,28 +75,36 @@ function IpList() {
             </div>
 
             {showAddForm && (
-                <AddIpForm
-                    onIpAdded={() => {
-                        loadIps();
-                        setShowAddForm(false);
-                    }}
-                />
+                // - Utilise <AddIpForm> avec props:
+                //   - onIpAdded: callback qui:
+                //     - Recharge la liste des IPs (loadIps)
+                //     - Cache le formulaire (setShowAddForm(false))
+                // - Le formulaire doit être affiché uniquement si showAddForm est true
+                // - Ajouter bouton pour basculer l'affichage du formulaire
+
             )}
 
             {editingIp && (
-                <EditIpForm
-                    ip={editingIp}
-                    onClose={() => setEditingIp(null)}
-                    onIpUpdated={loadIps}
-                />
+                // - Utilise <EditIpForm> avec props:
+                //   - ip: passer l'IP en cours d'édition (editingIp)
+                //   - onClose: callback pour fermer le modal (setEditingIp(null))
+                //   - onIpUpdated: callback pour recharger la liste (loadIps)
+                // - Le formulaire apparaît si editingIp n'est pas null
+                // - Gérer le clic sur "Éditer" pour définir editingIp
+
             )}
 
             {deletingIp && (
-                <DeleteConfirmationModal
-                    ip={deletingIp}
-                    onConfirm={handleDeleteConfirm}
-                    onCancel={() => setDeletingIp(null)}
-                />
+                // - utilise <DeleteConfirmationModal> avec props:
+                //   - ip: IP à supprimer (deletingIp)
+                //   - onConfirm: callback de confirmation (handleDeleteConfirm) qui:
+                //     - Appelle ipService.deleteIp
+                //     - Recharge la liste
+                //     - Réinitialise deletingIp
+                //   - onCancel: callback pour annuler (setDeletingIp(null))
+                // - Modal visible uniquement si deletingIp n'est pas null
+                // - Gérer les erreurs de suppression avec deleteError
+
             )}
 
             <div className="table-responsive mt-4">
