@@ -3,10 +3,19 @@ import os
 from models.ip_address import IPAddress, Base
 from controllers.ip_address_controller import ip_addresses
 from database import init_db, get_db, FILE_DB_NAME
+from flask_cors import CORS
 
 
 def create_app():
     app = Flask(__name__)
+    # Configuration du CORS pour permettre les requêtes cross-origin
+    CORS(app,
+         resources={r"/*": {
+             "origins": "*",
+             "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+             "allow_headers": ["Content-Type", "Authorization"]
+         }}
+    )
 
     init_db(app)
 
