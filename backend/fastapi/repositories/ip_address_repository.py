@@ -1,11 +1,11 @@
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
 from typing import List, Optional, Any
-from backend.flask.models.ip_address import IPAddress
+from ..models.ip_address import IPAddress
 
 
 class IPAddressRepository:
-    # Initialise le repository avec une session de base de données
+
     def __init__(self, db: Session):
         self.db = db
 
@@ -53,6 +53,16 @@ class IPAddressRepository:
     # @return: True si supprimé avec succès, False si l'IP n'existe pas
     # @raise: SQLAlchemyError en cas d'erreur lors de la suppression
     def delete(self, ip_id: str) -> bool:
+        try:
+            ip_address = self.get_by_id(ip_id)
+            if ip_address:
+                self.db.delete(ip_address)
+                self.db.commit()
+                return True
+            return False
+        except SQLAlchemyError as e:
+            self.db.rollback()
+            raise e
 
     # Compte le nombre total d'adresses IP dans la base de données
     # @return: nombre total d'adresses IP enregistrées
